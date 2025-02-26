@@ -1,32 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-    <link rel="stylesheet" href="/style.css">
+    <title>Estatery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet" />
+
   </head>
-  <body>
-
-
-
-  <!DOCTYPE html>
-  <html lang="en">
-    
-        <head>
-          <title>Estatery</title>
-          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-          <link rel="stylesheet" href="style.css" />
-        </head>
-  <body>
-    
-  </body>
-  </html>
   <body>
     <header class="header">
       <div class="container header__container">
@@ -43,6 +24,27 @@
         <div class="header__right">
           <button class="header__login-button">Login</button>
           <button class="header__signup-button">Sign up</button>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div class="hidden mobile-menu">
+          <ul class="">
+            <li class="active">
+              <a class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold" href="#">Home</a>
+            </li>
+            <li>
+              <a class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300" href="#">About</a>
+            </li>
+            <li>
+              <a class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300" href="#">Services</a>
+            </li>
+            <li>
+              <a class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -114,107 +116,100 @@
             <h3 class="feature__title">Best Price</h3>
             <p class="feature__description">Not sure what you should be charging for your property? Head to our website to find out numbers for you.</p>
           </div>
-          <div class="feature">
+          <div class="feature2">
             <h3 class="feature__title">Lowest Commission</h3>
             <p class="feature__description">You no longer have to negotiate for commission and pay 0% commission with our agents.</p>
           </div>
-          <div class="feature">
+          <div class="feature3">
             <h3 class="feature__title">Overall Control</h3>
             <p class="feature__description">Get overall control and visibility into your property and deal with the best transparency.</p>
           </div>
         </div>
-      </section>`
-    <div class="location">
-<h1>Based on your location</h1>
-<p>Some of our picked properties near you location.</p>
-    </div>
-    <input type="text" id="searchInput" placeholder="Пошук..." onkeyup="searchFunction()">
-<div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide catalog-slide">
-        <img src="/img/dillon-kydd-XGvwt544g8k-unsplash 1.png" alt="" class="slider-photo">
-        <h3 class="slider-price">$2,095<span class="price-span">/month</span> </h3>
-
-        <h2 class="slider-name">Palm Harbor</h2>
-        <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
-        <hr class="slider-line">
-        <div class="slider-desc">
-            <p class="slider-desc-item">3 Beds</p>
-            <p class="slider-desc-item">2 Bathrooms</p>
-            <p class="slider-desc-item">5x7 m²</p>
-        </div>
+      </section>
+      <div class="location">
+        <h1>Based on your location</h1>
+        <p>Some of our picked properties near your location.</p>
       </div>
-      <div class="swiper-slide catalog-slide">
-        <img src="/img/pexels-binyamin-mellish-106399 1.png" alt="" class="slider-photo">
-        <h3 class="slider-price">$2,095<span class="price-span">/month</span> </h3>
-
-        <h2 class="slider-name">Palm Harbor</h2>
-        <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
-        <hr class="slider-line">
-        <div class="slider-desc">
-            <p class="slider-desc-item">3 Beds</p>
-            <p class="slider-desc-item">2 Bathrooms</p>
-            <p class="slider-desc-item">5x7 m²</p>
+      <input type="text" id="searchInput" placeholder="Пошук..." onkeyup="searchFunction()">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide catalog-slide">
+            <img src="/img/dillon-kydd-XGvwt544g8k-unsplash 1.png" alt="" class="slider-photo">
+            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
+            <h2 class="slider-name">Palm Harbor</h2>
+            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <hr class="slider-line">
+            <div class="slider-desc">
+              <p class="slider-desc-item">3 Beds</p>
+              <p class="slider-desc-item">2 Bathrooms</p>
+              <p class="slider-desc-item">5x7 m²</p>
+            </div>
+          </div>
+          <div class="swiper-slide catalog-slide">
+            <img src="/img/pexels-binyamin-mellish-106399 1.png" alt="" class="slider-photo">
+            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
+            <h2 class="slider-name">Palm Harbor</h2>
+            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <hr class="slider-line">
+            <div class="slider-desc">
+              <p class="slider-desc-item">3 Beds</p>
+              <p class="slider-desc-item">2 Bathrooms</p>
+              <p class="slider-desc-item">5x7 m²</p>
+            </div>
+          </div>
+          <div class="swiper-slide catalog-slide">
+            <img src="/img/r-architecture-0tKCSyLXqQM-unsplash 1.png" alt="" class="slider-photo">
+            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
+            <h2 class="slider-name">Palm Harbor</h2>
+            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <hr class="slider-line">
+            <div class="slider-desc">
+              <p class="slider-desc-item">3 Beds</p>
+              <p class="slider-desc-item">2 Bathrooms</p>
+              <p class="slider-desc-item">5x7 m²</p>
+            </div>
+          </div>
+          <div class="swiper-slide catalog-slide">
+            <img src="/img/todd-kent-178j8tJrNlc-unsplash 1.png" alt="" class="slider-photo">
+            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
+            <h2 class="slider-name">Palm Harbor</h2>
+            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <hr class="slider-line">
+            <div class="slider-desc">
+              <p class="slider-desc-item">3 Beds</p>
+              <p class="slider-desc-item">2 Bathrooms</p>
+              <p class="slider-desc-item">5x7 m²</p>
+            </div>
+          </div>
+          <div class="swiper-slide catalog-slide">
+            <img src="/img/zac-gudakov-wwqZ8CM21gg-unsplash 1.png" alt="" class="slider-photo">
+            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
+            <h2 class="slider-name">Palm Harbor</h2>
+            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <hr class="slider-line">
+            <div class="slider-desc">
+              <p class="slider-desc-item">3 Beds</p>
+              <p class="slider-desc-item">2 Bathrooms</p>
+              <p class="slider-desc-item">5x7 m²</p>
+            </div>
+          </div>
+          <div class="swiper-slide catalog-slide">
+            <img src="/img/pexels-pixabay-259588 1.png" alt="" class="slider-photo">
+            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
+            <h2 class="slider-name">Palm Harbor</h2>
+            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <hr class="slider-line">
+            <div class="slider-desc">
+              <p class="slider-desc-item">3 Beds</p>
+              <p class="slider-desc-item">2 Bathrooms</p>
+              <p class="slider-desc-item">5x7 m²</p>
+            </div>
+          </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-      <div class="swiper-slide catalog-slide">
-        <img src="/img/r-architecture-0tKCSyLXqQM-unsplash 1.png" alt="" class="slider-photo">
-        <h3 class="slider-price">$2,095<span class="price-span">/month</span> </h3>
-
-        <h2 class="slider-name">Palm Harbor</h2>
-        <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
-        <hr class="slider-line">
-        <div class="slider-desc">
-            <p class="slider-desc-item">3 Beds</p>
-            <p class="slider-desc-item">2 Bathrooms</p>
-            <p class="slider-desc-item">5x7 m²</p>
-        </div>
-      </div>
-      <div class="swiper-slide catalog-slide">
-        <img src="/img/todd-kent-178j8tJrNlc-unsplash 1.png" alt="" class="slider-photo">
-        <h3 class="slider-price">$2,095<span class="price-span">/month</span> </h3>
-
-        <h2 class="slider-name">Palm Harbor</h2>
-        <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
-        <hr class="slider-line">
-        <div class="slider-desc">
-            <p class="slider-desc-item">3 Beds</p>
-            <p class="slider-desc-item">2 Bathrooms</p>
-            <p class="slider-desc-item">5x7 m²</p>
-        </div>
-      </div>
-      <div class="swiper-slide catalog-slide">
-        <img src="/img/zac-gudakov-wwqZ8CM21gg-unsplash 1.png" alt="" class="slider-photo">
-        <h3 class="slider-price">$2,095<span class="price-span">/month</span> </h3>
-
-        <h2 class="slider-name">Palm Harbor</h2>
-        <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
-        <hr class="slider-line">
-        <div class="slider-desc">
-            <p class="slider-desc-item">3 Beds</p>
-            <p class="slider-desc-item">2 Bathrooms</p>
-            <p class="slider-desc-item">5x7 m²</p>
-        </div>
-      </div>
-      <div class="swiper-slide catalog-slide">
-        <img src="/img/pexels-pixabay-259588 1.png" alt="" class="slider-photo">
-        <h3 class="slider-price">$2,095<span class="price-span">/month</span> </h3>
-
-        <h2 class="slider-name">Palm Harbor</h2>
-        <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
-        <hr class="slider-line">
-        <div class="slider-desc">
-            <p class="slider-desc-item">3 Beds</p>
-            <p class="slider-desc-item">2 Bathrooms</p>
-            <p class="slider-desc-item">5x7 m²</p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-  </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/script.js"></script>
   </body>
