@@ -3,6 +3,8 @@
   <head>
     <title>Estatery</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet" />
@@ -13,12 +15,33 @@
       <div class="container header__container">
         <div class="header__left">
           <img class="header__logo" alt="Estatery logo" src="/img/Vector.svg" />
-          
-        </div>
-        <div class="header__right">
-          <button class="header__login-button">Login</button>
-          <button class="header__signup-button">Sign up</button>
-        </div>
+        
+          <header class="flex justify-end p-4">
+            <div id="userGreeting"></div>
+            <button id="loginButton" class="header__login-button">Login</button>
+            <button id="signupButton" class="header__signup-button">Sign Up</button>
+          </header>
+      
+          <div  id="loginModal" class="modal hidden">
+            <div class="modal-content">
+              <span class="close" data-modal="loginModal">&times;</span>
+              <h2>Login</h2>
+              <input type="email" id="loginEmail" placeholder="Email" />
+              <input type="password" id="loginPassword" placeholder="Password" />
+              <button id="confirmLogin">Login</button>
+            </div>
+          </div>
+      
+          <div id="signupModal" class="modal hidden">
+            <div class="modal-content">
+              <span class="close" data-modal="signupModal">&times;</span>
+              <h2>Sign Up</h2>
+              <input type="text" id="signupName" placeholder="Name" />
+              <input type="email" id="signupEmail" placeholder="Email" />
+              <input type="password" id="signupPassword" placeholder="Password" />
+              <button id="confirmSignup">Sign Up</button>
+            </div>
+          </div>
         
         </div>
         <nav class="nav">
@@ -120,12 +143,12 @@
         <h1>Based on your location</h1>
         <p>Some of our picked properties near your location.</p>
       </div>
-      <input type="text" id="searchInput" placeholder="Пошук..." onkeyup="searchFunction()">
+      <input type="text" id="searchInput" placeholder="Пошук..." class="search-box">
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide catalog-slide">
-            <img src="/img/dillon-kydd-XGvwt544g8k-unsplash 1.png" alt="" class="slider-photo">
-            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
+            <img src="/img/dillon-kydd-XGvwt544g8k-unsplash 1 (1).png" alt="" class="slider-photo">
+            <h3 class="slider-price"><span style="color: purple; font-size: 30px; ">$2,095</span><span style="color: gray; ">/month</span></h3>
             <h2 class="slider-name">Palm Harbor</h2>
             <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
             <hr class="slider-line">
@@ -137,9 +160,9 @@
           </div>
           <div class="swiper-slide catalog-slide">
             <img src="/img/pexels-binyamin-mellish-106399 1.png" alt="" class="slider-photo">
-            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
-            <h2 class="slider-name">Palm Harbor</h2>
-            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <h3 class="slider-price"><span style="color: purple; font-size: 30px; ">$2,700</span><span style="color: gray; ">/month</span></h3>
+            <h2 class="slider-name">Beverly Springfield</h2>
+            <p class="slider-street">2821 Lake Sevilla, Palm Harbor, TX</p>
             <hr class="slider-line">
             <div class="slider-desc">
               <p class="slider-desc-item">3 Beds</p>
@@ -149,9 +172,9 @@
           </div>
           <div class="swiper-slide catalog-slide">
             <img src="/img/r-architecture-0tKCSyLXqQM-unsplash 1.png" alt="" class="slider-photo">
-            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
-            <h2 class="slider-name">Palm Harbor</h2>
-            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <h3 class="slider-price"><span style="color: purple; font-size: 30px; ">$4,550</span><span style="color: gray; ">/month</span></h3>
+            <h2 class="slider-name">Faulkner Ave</h2>
+            <p class="slider-street">909 Woodland St, Michigan, IN</p>
             <hr class="slider-line">
             <div class="slider-desc">
               <p class="slider-desc-item">3 Beds</p>
@@ -161,9 +184,9 @@
           </div>
           <div class="swiper-slide catalog-slide">
             <img src="/img/todd-kent-178j8tJrNlc-unsplash 1.png" alt="" class="slider-photo">
-            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
-            <h2 class="slider-name">Palm Harbor</h2>
-            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <h3 class="slider-price"><span style="color: purple; font-size: 30px; ">$2,400</span><span style="color: gray; ">/month</span></h3>
+            <h2 class="slider-name">St. Crystal</h2>
+            <p class="slider-street">210 US Highway, Highland Lake, FL</p>
             <hr class="slider-line">
             <div class="slider-desc">
               <p class="slider-desc-item">3 Beds</p>
@@ -173,9 +196,9 @@
           </div>
           <div class="swiper-slide catalog-slide">
             <img src="/img/zac-gudakov-wwqZ8CM21gg-unsplash 1.png" alt="" class="slider-photo">
-            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
-            <h2 class="slider-name">Palm Harbor</h2>
-            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <h3 class="slider-price"><span style="color: purple; font-size: 30px; ">$1,500</span><span style="color: gray; ">/month</span></h3>
+            <h2 class="slider-name">Cove Red</h2>
+            <p class="slider-street">243 Curlew Road, Palm Harbor, TX</p>
             <hr class="slider-line">
             <div class="slider-desc">
               <p class="slider-desc-item">3 Beds</p>
@@ -185,9 +208,9 @@
           </div>
           <div class="swiper-slide catalog-slide">
             <img src="/img/pexels-pixabay-259588 1.png" alt="" class="slider-photo">
-            <h3 class="slider-price">$2,095<span class="price-span">/month</span></h3>
-            <h2 class="slider-name">Palm Harbor</h2>
-            <p class="slider-street">2699 Green Valley, Highland Lake, FL</p>
+            <h3 class="slider-price"><span style="color: purple; font-size: 30px; ">$1,600</span><span style="color: gray; ">/month</span></h3>
+            <h2 class="slider-name">Tarpon Bay</h2>
+            <p class="slider-street">103 Lake Shores, Michigan, IN</p>
             <hr class="slider-line">
             <div class="slider-desc">
               <p class="slider-desc-item">3 Beds</p>
@@ -199,6 +222,21 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
+
+
+
+
+
+
+      <div class="card" style="width: 18rem;">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/script.js"></script>

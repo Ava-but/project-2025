@@ -63,6 +63,8 @@ body {
     margin-right: 16px;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
+    position: absolute;
+    right: 20px;
   }
   
   .header__login-button:hover {
@@ -77,6 +79,8 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
+    position: absolute;
+    right: 200px;
   }
   
   .header__signup-button:hover {
@@ -477,3 +481,61 @@ nav{
   max-width: 100%;
   height: auto;
 }
+
+.swiper {
+  width: 100%;
+  padding: 20px;
+}
+
+.swiper-slide {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+
+
+
