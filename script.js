@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     document.getElementById("searchInput").addEventListener("keyup", searchFunction);
   });
+
   
   document.addEventListener("DOMContentLoaded", function () {
     const loginModal = document.getElementById("loginModal");
