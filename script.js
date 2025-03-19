@@ -180,6 +180,53 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
+  function searchFunction() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let items = document.querySelectorAll("");
+
+    items.forEach(item => {
+        let text = item.textContent.toLowerCase();
+        item.classList.toggle("hide", !text.includes(input));
+    });
+}
+const swiper = new Swiper('.swiper', {
+
+    loop: true,
+    slidesPerView:3,
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
   
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+
+  function searchFunction() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let slides = document.querySelectorAll(".swiper-slide");
+
+    slides.forEach((slide) => {
+      let name = slide.querySelector(".slider-name").textContent.toLowerCase();
+      let street = slide.querySelector(".slider-street").textContent.toLowerCase();
+
+      if (name.includes(input) || street.includes(input)) {
+        slide.style.display = "block";
+      } else {
+        slide.style.display = "none";
+      }
+    });
+
+    swiper.update(); 
+  }
+
+  document.getElementById("searchInput").addEventListener("keyup", searchFunction);
+
 
   
